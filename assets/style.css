@@ -1,0 +1,60 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.prinpical_image{
+    background-image: url("./img/bg.jpg");
+    height: calc(100vh - 56px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.prinpical_image_box{
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+}
+.prinpical_image_text{
+    width: 100%;
+    text-align: center;
+    margin: auto 1rem;
+}
+.btn-transparent{
+    background-color: transparent;
+    color: white;
+}
+.cards-container{
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.card{
+    margin: 1rem;
+}
+.cards_text{
+    text-align: center;
+    text-transform: uppercase;
+}
+.cards_text{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 1rem 0;
+}
+.cards_text p{
+    margin-bottom: 0;
+    font-size: 0.65rem;
+}
+.cards_text h6{
+    font-size: 1.7rem;
+}
+.card-img-top{
+    height: 200px;
+}
+.bg-light-blue{
+    background-color: darkcyan;
+}
+.card-price{
+    font-size: 1rem;
+}

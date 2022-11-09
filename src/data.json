@@ -1,0 +1,37 @@
+[
+    {
+        "title": "Vestido Negro",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit",
+        "id": 1,
+        "image": "./assets/img/img1.JPG", 
+        "price": 10
+    },
+    {
+        "title": "Palazzo",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit",
+        "id": 2,
+        "image": "./assets/img/img2.JPG", 
+        "price": 11
+    },
+    {
+        "title": "Pantalon",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit",
+        "id": 3,
+        "image": "./assets/img/img3.JPG", 
+        "price": 12
+    },
+    {
+        "title": "Remera natural",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit",
+        "id": 4,
+        "image": "./assets/img/img4.JPG", 
+        "price": 13
+    },
+    {
+        "title": "Remera algodón",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit",
+        "id": 5,
+        "image": "./assets/img/img5.JPG", 
+        "price": 14
+    }
+]
