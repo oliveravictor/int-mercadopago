@@ -1,19 +1,46 @@
-const express = require('express')
-const app = express()
+var productos;
+/* $(document).ready(function () {
+    $.ajax({
+        url: "./data.json", 
+        dataType: "json",
+        success: function(data) {
+            productos = data;
+            showCardsProducts(productos);
+            
+        }
+    });
+}); */
 
-// SDK de Mercado Pago
-const mercadopago = require("mercadopago");
-// Agrega credenciales
-mercadopago.configure({
-  access_token: "PROD_ACCESS_TOKEN",
-});
+function getProducts(){
+    fetch("./src/data.json")
+    .then(res => res.json())
+    .then(data => {
+        productos = data;
+        console.log(productos)
+        showProducts(productos)
+    })
+}
 
-// Route
-app.get('/checkout', (req, res) => {
-  res.send('<h1>Hola desde checkout re</h1>')
-})
+getProducts()
 
-// Server
-app.listen(3000, () => {
-  console.log('server on port 3000')
-})
+//Muestra cards de productos en html
+function showProducts(unidad){
+    let acu = ``;
+    for (let i = 0; i < unidad.length; i++) {
+        acu += `
+        <div class="card" style="width: 18rem;">
+            <img src="${unidad[i].image}" class="card-img-top" alt="${unidad[i].title}">
+            <div class="card-body">
+                <div>
+                    <span class="badge bg-warning text-dark">Primavera</span>
+                </div>
+                <h5 class="card-title">${unidad[i].title}</h5>
+                <p class="card-text">${unidad[i].description}</p>
+                <p class="card-text badge text-white bg-info card-price">$ ${unidad[i].price}</p>
+                <a href="#" class="btn btn-outline-dark d-block">Comprar</a>
+            </div>
+        </div>
+        `;
+    }
+    document.getElementById("productos").innerHTML = acu;
+}
